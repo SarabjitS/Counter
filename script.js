@@ -10,6 +10,7 @@ let currentValueAsNumber = +currentValue;
 
 resetButtonEl.addEventListener("click", () => {
   // set counter value to 0
+  currentValueAsNumber = 0;
   counterValueEl.textContent = 0;
 
   // reset background color
