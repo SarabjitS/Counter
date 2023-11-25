@@ -65,3 +65,13 @@ body {
 .counter__reset-icon:hover {
   opacity: 0.5;
 }
+
+.counter__buttons {
+  background-color: #1d2507;
+  height: 116px;
+  width: 100%;
+  margin-top: auto;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+}
