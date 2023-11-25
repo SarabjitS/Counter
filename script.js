@@ -23,7 +23,7 @@ resetButtonEl.addEventListener("click", () => {
   resetButtonEl.blur();
 });
 
-decreaseButtonEl.addEventListener("click", () => {
+const decreaseCounter = () => {
   // get current value of counter
   const currentValue = counterValueEl.textContent;
 
@@ -44,7 +44,7 @@ decreaseButtonEl.addEventListener("click", () => {
 
   // unfocus (blur) button
   decreaseButtonEl.blur();
-});
+};
 
 const incrementCounter = () => {
   // get current value of counter
@@ -80,4 +80,13 @@ const incrementCounter = () => {
 };
 
 increaseButtonEl.addEventListener("click", incrementCounter);
-document.addEventListener("keydown", incrementCounter);
+decreaseButtonEl.addEventListener("click", decreaseCounter);
+document.addEventListener("keydown", function (e) {
+  console.log(e.key);
+  if (e.key == "ArrowUp") {
+    incrementCounter();
+  }
+  if (e.key == "ArrowDown") {
+    decreaseCounter();
+  }
+});
